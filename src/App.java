@@ -16,13 +16,12 @@ public class App {
         System.out.print("Enter owner name: ");
         String ownerName = scanner.nextLine();
         
-        Car myNewCar = new Car(carBranch, ownerName, carColor);
+        System.out.print("Enter owner email: ");
+        String ownerEmail = scanner.nextLine();
         
-        System.out.println("Car registered successfully!");
-        System.out.println("Branch: " + myNewCar.getCarBranch());
-        System.out.println("Color: " + myNewCar.getCarColor());
-        System.out.println("Owner: " + myNewCar.getCarOwnerName());
-        System.out.println("Inspection Date: " + myNewCar.getCarInspectionDate()+ "\n");
+        Car myNewCar = new Car(carBranch, ownerName, carColor, ownerEmail);
+        
+        myNewCar.showCarDetail();
         
         scanner.close();
     }
